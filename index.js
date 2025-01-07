@@ -1,12 +1,16 @@
 import express from "express";
 import https from "https";
 import twilio from "twilio";
+import dotenv from "dotenv";
+
+// Load environment variables from .env file
+dotenv.config();
+const ULTRAVOX_API_KEY = process.env.ULTRAVOX_API_KEY;
 
 const app = express();
 const port = 8000;
 
 // Configuration
-const ULTRAVOX_API_KEY = "ZZf2tNBt.XpDPnBYd0G8DNrPeyyWnYLIDckFL3kaT";
 const ULTRAVOX_API_URL = "https://api.ultravox.ai/api/calls";
 
 // Ultravox configuration
